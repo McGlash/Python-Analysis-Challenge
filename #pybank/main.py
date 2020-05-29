@@ -69,10 +69,7 @@ for calculated_change_1 in change:
 #display findings on terminal
 
 #Title
-print(" ")
-print ("Financial Analysis")
-print("______________________")
-print(" ")
+print(" " + "\n" + "Financial Analysis" + "\n" + "______________________" + "\n")
 
 #display the total findings
 print(f"Total month: {total_months}")
@@ -86,21 +83,13 @@ print(f"Greatest Increase in Profits: {month_of_greatest_increase} (${round(grea
 print(f"Greatest Decrease in Profits: {month_of_greatest_decrease} (${round(greatest_decrease, 2)})")
 print("______________________")
 
-#store findings 
-title = (" " + "\n" + "Financial Analysis" + "\n" + "______________________" + "\n")
-total_findings = ("Total month: " + str(total_months) + "\n" + "Total: " + str(total) + "\n")
-average_findings =("Average change: $" + str(round(average_change, 2)) + "\n")
-increase_findings = ("Greatest Increase in Profits: " + str(month_of_greatest_increase) + " ($" + str(round(greatest_increase, 2)) + ")" + "\n")
-decrease_findings = ("Greatest Decrease in Profits: " + str(month_of_greatest_decrease) + " ($" + str(round(greatest_decrease, 2)) + ")" + "\n" + "______________________")
-
 #defining path for output file
-budget_outputfile_path = os.path.join ("..", "Analysis", "budget_output.txt")
-
+budget_outputfile_path = os.path.join ("..", "Analysis", "financial_analysis.txt")
 
 #writing findings to text file
 with open(budget_outputfile_path, "w") as budget_txt_file:
-    budget_txt_file.write(title)
-    budget_txt_file.write(total_findings)
-    budget_txt_file.write(average_findings)
-    budget_txt_file.write(increase_findings)
-    budget_txt_file.write(decrease_findings)
+    budget_txt_file.write(" " + "\n" + "Financial Analysis" + "\n" + "______________________" + "\n")
+    budget_txt_file.write("Total month: " + str(total_months) + "\n" + "Total: " + str(total) + "\n")
+    budget_txt_file.write("Average change: $" + str(round(average_change, 2)) + "\n")
+    budget_txt_file.write("Greatest Increase in Profits: " + str(month_of_greatest_increase) + " ($" + str(round(greatest_increase, 2)) + ")" + "\n")
+    budget_txt_file.write("Greatest Decrease in Profits: " + str(month_of_greatest_decrease) + " ($" + str(round(greatest_decrease, 2)) + ")" + "\n" + "______________________")
