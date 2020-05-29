@@ -96,6 +96,8 @@ decrease_findings = ("Greatest Decrease in Profits: " + str(month_of_greatest_de
 #defining path for output file
 budget_outputfile_path = os.path.join ("..", "Analysis", "budget_output.txt")
 
+
+#writing findings to text file
 with open(budget_outputfile_path, "w") as budget_txt_file:
     budget_txt_file.write(title)
     budget_txt_file.write(total_findings)
