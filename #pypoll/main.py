@@ -18,7 +18,7 @@ total_no_votes = 0
 vote_count = []
 
 #Open file, read and view file
-with open(poll_file_path) as poll_csvfile:
+with open(poll_file_path, "r") as poll_csvfile:
     poll_csv_read_file = csv.reader(poll_csvfile, delimiter=',')
    
     header = next(poll_csv_read_file)
@@ -84,8 +84,7 @@ print("_________________________________")
 #store findings 
 title = (" " + "\n" + "Election Results" + "\n" + "______________________" + "\n")
 total_vote_findings = ("Total Votes: " + str(total_no_votes) + "\n" + "______________________" + "\n")
-#average_findings =("Average change: $" + str(round(average_change, 2)) + "\n")
-winner_findings = ("winner: " + str(winner) + "\n" + "______________________")
+winner_findings = ("______________________" + "\n" + "winner: " + str(winner) + "\n" + "______________________")
 
 #defining path for output file
 poll_outputfile_path = os.path.join ("..", "Analysis", "election results.txt")
@@ -93,4 +92,7 @@ poll_outputfile_path = os.path.join ("..", "Analysis", "election results.txt")
 with open(poll_outputfile_path, "w") as poll_txt_file:
     poll_txt_file.write(title)
     poll_txt_file.write(total_vote_findings)
+
+    for candidate_2 in candidate_list:
+        poll_txt_file.write(f"{candidate_2}: {round(percent_votes[candidate_list.index(candidate_2)],4)}% ({vote_count[candidate_list.index(candidate_2)]})\n")
     poll_txt_file.write(winner_findings)
