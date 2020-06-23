@@ -63,7 +63,7 @@ for value in vote_count:
 
 #votes by candidate findings display
 for candidate_2 in candidate_list:
-    print(f"{candidate_2}: {round(percent_votes[candidate_list.index(candidate_2)],4)}% ({vote_count[candidate_list.index(candidate_2)]})")
+    print(f"{candidate_2}: {round(percent_votes[candidate_list.index(candidate_2)],2)}% ({vote_count[candidate_list.index(candidate_2)]})")
 print("_________________________________")
 print(" ")
 
