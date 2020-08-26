@@ -36,3 +36,17 @@
   * The total number of votes each candidate won
 
   * The winner of the election based on popular vote
+  
+
+Election Results
+______________________
+Total Votes: 3521001
+______________________
+Khan: 63.0% (2218231)
+Correy: 20.0% (704200)
+Li: 14.0% (492940)
+O'Tooley: 3.0% (105630)
+______________________
+winner: Khan
+______________________
+______________________
