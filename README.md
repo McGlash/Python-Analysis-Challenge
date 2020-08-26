@@ -1,6 +1,6 @@
-# Python Challenge - Py Me Up, Charlie
+# Python Analysis Challenge 
 
-## PyBank
+## Financial Analysis
 
 ![Revenue](Images/revenue-per-lead.png)
 
@@ -31,7 +31,7 @@ Greatest Decrease in Profits: Sep-2013 ($-2196167)
 ______________________
   ```
 
-## PyPoll
+## Election Results Analysis
 
 ![Vote Counting](Images/Vote_counting.png)
 
